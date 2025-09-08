@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		border: 2px solid black;
+		border-radius: 10px;
+		padding: 10px;
+		margin: 10px;
+	}
+</style>
+</head>
+<body>
+
+	<h1>Agenda de teléfonos WEB</h1>
+
+	<form action="AgendaServlet">
+		<div>
+			1. Cargar datos del CSV:<input type="radio" name="opcion" value="cargarCSV" />
+		</div>
+		<div>
+			2. Buscar por teléfono <input type="radio" name="opcion" value="BuscarPorTelef" /> <input
+				type="text" name="telefono" />
+		</div>
+		<div>
+			<p>
+				3. Buscar por teléfono por nombre y primera apellido de persona <input type="radio" name="opcion" value="BuscarPorPersona" />
+			</p>
+			<p> 
+				Nombre: <input type="text" name="nombre" /> Primer apellido: <input type="text" name="apellido" />
+			</p>
+			
+		</div>
+		
+<!-- 
+ 4. Dar de alta una nueva Persona con su teléfono en la agenda
+ 5. Borrar una persona concreta de la agenda.
+ 6. Devolver la lista de personas con su teléfono ordenados por DNI-->		
+		<div>
+			<p>
+				4. Modificar el teléfono de una persona en concreto <input type="radio" name="opcion" value="ModificarTelefonoPorPersona" />
+			</p>
+			<p>
+				5. Dar de alta (solo nombre, apellido y teléfono obligatorios) <input type="radio" name="opcion" value="darAlta" />
+			</p>
+			<p>
+				6. Borrar persona de la agenda (solo nombre y apellido obligatorios) <input type="radio" name="opcion" value="borrarPersona" />
+			</p>
+			
+			<p> 
+				Nombre: <input type="text" name="nombreNuevo" /> Primer apellido: <input type="text" name="apellidoNuevo" />
+			</p>
+			<p>
+				Teléfono nuevo:<input type="text" name="telefonoNuevo" />			
+			</p>
+			
+		</div>
+		<div>
+				7. Listar ordenados por DNI:<input type="radio" name="opcion" value="listar" />
+		</div>
+		
+		
+		
+		<input type="submit" value="Ejecutar" />
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fotos D.B</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Proyecto para subir una foto al servidor y guardarla en B.D</h1>
+        <div class="signupFrm">
+            <div class="wrapper">
+                <form action="RegistroServlet" method="post" enctype="multipart/form-data" class="form">
+                    <h3 class="title">Registro de usuario</h3>
+                    <div class="inputContainer">
+                        <input type="text" name="login" class="input" required>
+                        <label for="name" class="label">Login (*)</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" name="pwd" class="input" required>
+                        <label for="name" class="label">Password (*)</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="email" name="email" class="input" required>
+                        <label for="email" class="label">Email (*)</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="date" name="date" class="input">
+                        <label for="date" class="label">Fecha</label>
+                    </div>
+                    Foto de perfil:
+	                    <div style="margin-top: 25px">
+	                        <input type="file" name="photo" class="file">
+	                        <!--  <label for="date" class="label">Foto de perfil</label>-->
+	                    </div>
+                    <div style="border: 1px solid graytext;border-radius: 25px;margin-top: 25px">
+                        <p>
+	                        <input type="radio" name="opcion" value="alta" checked />Registrar
+                        </p>
+                    	<p>
+	                        <input type="radio" name="opcion" value="inicio" checked />Inicio sesión
+                        </p>                        
+                        <!-- <p>
+                        <input type="radio" name="opcion" value="listar" onclick="quitarTodosObligatorios()"/>Listar todos
+                        </p>
+                        <p>
+                        <input type="radio" name="opcion" value="actualizar" onclick="quitarFotoObligatoria()"/>Actualizar email y fecha por nombre
+                        </p> -->
+                    </div>
+                    <input type="submit" class="submitBtn" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <script>
+            /*function quitarTodosObligatorios(){
+                document.forms[0].name.required = false;
+                document.forms[0].email.required = false;
+                document.forms[0].date.required = false;
+                document.forms[0].photo.required = false;
+            }
+            function quitarFotoObligatoria(){
+                document.forms[0].photo.required = false;
+            }*/
+        </script>
+    </body>
+</html>

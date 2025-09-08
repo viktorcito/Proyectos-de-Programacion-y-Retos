@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>POKEDEX WEB</title>
+	<style>
+	div {
+		border: 1px solid black;
+		padding: 20px;
+	}
+	
+	</style>
+</head>
+<body>
+	<h1>POKEDEX DAW 1A</h1>
+	<h2>Escribe el nombre del Pokemon del que quieres ver la imagen</h2>
+	<div>
+		<form action="GetPokemon" method="post">
+			<label>Nombre:</label> <input name="nombrePokemon" size="30" required />
+			<p>
+				<label>Ficha completa del pokemon:</label><input type="radio"
+					name="tipo" value="info" />
+			</p>
+			<p>
+				<label>Mostrar imagen FRONT: </label><input type="radio" name="tipo"
+					value="front" />
+			</p>
+			<p>
+				<label>Mostrar imagen BACK: </label><input type="radio" name="tipo"
+					value="back" />
+			</p>
+			<p>
+				<input type="submit" value="Ver info" />
+			</p>
+
+		</form>
+	</div>
+	<div>
+		<a href="GetListaPokemons" target="_blank">Obtener listado de Pokemons</a>
+	</div>
+</body>
+</html>
